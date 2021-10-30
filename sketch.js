@@ -7,7 +7,11 @@ function setup() {
     let x = random(width);
     let y = random(height);
     let m = random(25, 50);
-    others[i] = new Others(x, y, m);
+    let r = random(255);
+    let g = random(255);
+    let b = random(255);
+
+    others[i] = new Others(x, y, m, r, g, b);
   }
   me = new Me(random(width), random(height), 100);
   background(0);
@@ -25,5 +29,6 @@ function draw() {
     me.pos.x = mouseX;
     me.pos.y = mouseY;
   }
+
   me.show();
 }

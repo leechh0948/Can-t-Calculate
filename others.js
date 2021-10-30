@@ -1,11 +1,14 @@
 class Others {
-  constructor(x, y, m) {
+  constructor(x, y, m, r, g, b) {
     this.pos = createVector(x, y);
     this.vel = p5.Vector.random2D();
     this.vel.mult(3);
     this.acc = createVector(0, 0);
     this.mass = m;
-    this.r = this.mass / 5;
+    this.radius = this.mass / 5;
+    this.r = r;
+    this.g = g;
+    this.b = b;
   }
 
   applyForce(force) {
@@ -18,7 +21,7 @@ class Others {
     this.pos.add(this.vel);
     this.acc.set(0, 0);
   }
-  
+
   edges(){
     if (this.pos.y > height) {
       this.vel.y *= -1;
@@ -36,12 +39,12 @@ class Others {
       this.vel.y *= -1;
       this.pos.y = 0;
     }
-    
+
 
   }
 
   show() {
-    fill(255, 100);
-    ellipse(this.pos.x, this.pos.y, this.r * 2);
+    fill(this.r, this.g, this.b);
+    ellipse(this.pos.x, this.pos.y, this.radius * 2);
   }
 }
