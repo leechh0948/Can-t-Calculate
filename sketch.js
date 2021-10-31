@@ -3,16 +3,6 @@ let me;
 
 function setup() {
   createCanvas(720, 720);
-  for (let i = 0; i < 10; i++) {
-    let x = random(width);
-    let y = random(height);
-    let m = random(25, 50);
-    let r = random(255);
-    let g = random(255);
-    let b = random(255);
-
-    others[i] = new Others(x, y, m, r, g, b);
-  }
   me = new Me(random(width), random(height), 100);
   background(0);
 }
@@ -31,4 +21,11 @@ function draw() {
   }
 
   me.show();
+}
+
+function keyPressed(){
+  if (keyCode == LEFT_ARROW){
+    let o = new Others(random(width), random(height), random(20, 50));
+    others.push(o);
+  }
 }
