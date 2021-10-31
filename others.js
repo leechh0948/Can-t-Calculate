@@ -45,6 +45,11 @@ class Others {
 
   show() {
     fill(this.r, this.g, this.b);
-    ellipse(this.pos.x, this.pos.y, this.radius * 2);
+    if (random (0, 1) > 0.5){
+      ellipse(this.pos.x, this.pos.y, this.radius * 2);
+    }
+    else{
+      rect(this.pos.x, this.pos.y, this.radius * 2, this.radius * 2)
+    }
   }
 }
