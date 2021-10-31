@@ -8,7 +8,11 @@ function setup() {
 }
 
 function draw() {
- background(0, 5);
+  if(keyIsPressed == true){
+     if (key == 'a'){
+       background(0, 40);
+     }
+   }
   for (let i = 0; i < others.length; i++) {
     others[i].update();
     others[i].show();
