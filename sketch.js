@@ -28,4 +28,7 @@ function keyPressed(){
     let o = new Others(random(width), random(height), random(20, 50));
     others.push(o);
   }
+  else if (keyCode == RIGHT_ARROW){
+    others.pop();
+  }
 }
