@@ -1,7 +1,7 @@
 # Can-t-Calculate
 The human mind cannot be calculated.<br/>
 
-[작품 링크] (https://leechh0948.github.io/Can-t-Calculate/)
+[작품 링크](https://leechh0948.github.io/Can-t-Calculate/)
 
 # 작품 설명
   해당 작품은 작품을 감상하는 여러분의 상상에 맡기고 있습니다.<br/>
