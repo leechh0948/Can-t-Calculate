@@ -25,7 +25,13 @@ function draw() {
 
 function keyPressed(){
   if (keyCode == LEFT_ARROW){
-    let o = new Others(random(width), random(height), random(20, 50));
+    let x = random(width);
+    let y = random(height);
+    let m = random(20, 50);
+    let r = random(255);
+    let g = random(255);
+    let b = random(255);
+    let o = new Others(x, y, m, r, g, b);
     others.push(o);
   }
   else if (keyCode == RIGHT_ARROW){
